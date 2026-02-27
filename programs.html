@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programs | Pathways | RISE Ubuntu</title>
+  <!-- Tailwind + Inter font -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .text-gold { color: #f5c518; }
+    .bg-deep-navy { background-color: #0d1b3e; }
+    .border-gold\/60 { border-color: rgba(245, 197, 24, 0.6); }
+    .hover\:border-gold\/50:hover { border-color: rgba(245, 197, 24, 0.5); }
+    .bg-gold\/10 { background-color: rgba(245, 197, 24, 0.1); }
+    .from-deep-navy\/40 { --tw-gradient-from: rgba(13, 27, 62, 0.4); }
+    /* mobile menu toggle */
+    #mobileMenu { transition: max-height 0.3s ease, opacity 0.2s; max-height: 0; opacity: 0; overflow: hidden; }
+    #mobileMenu.open { max-height: 400px; opacity: 1; }
+  </style>
+</head>
+<body class="antialiased text-gray-800">
+
+  <!-- ===== fixed navbar ===== -->
+  <div class="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 pt-4">
+    <nav class="max-w-6xl mx-auto rounded-2xl transition-all duration-300 bg-white/15 backdrop-blur-md border border-white/30 shadow-lg">
+      <div class="px-5 lg:px-8 h-16 flex items-center justify-between">
+        <a class="flex items-center gap-2 flex-shrink-0" href="/">
+          <img src="https://rise-henna-pi.vercel.app/main%20logo%20left.png" alt="Pathways" class="h-8 w-auto object-contain">
+          <img src="https://rise-henna-pi.vercel.app/logo%20right.png" alt="RISE Ubuntu" class="h-8 w-auto object-contain">
+        </a>
+        <div class="hidden lg:flex items-center gap-6">
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="index.html">Home</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="about.html">About</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white font-semibold underline underline-offset-4 decoration-[#f5c518]" href="programs.html">Programs</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="stories.html">Stories</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="apply.html">Apply</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="support.html">Support</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="contact.html">Contact</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <button class="inline-flex items-center justify-center bg-[#f5c518] text-[#0d1b3e] hover:bg-[#f5c518]/90 font-semibold rounded-full px-5 h-9 text-sm shadow-md">Apply Now</button>
+          <button id="menuToggle" type="button" aria-label="Toggle menu" class="lg:hidden flex items-center justify-center w-9 h-9 rounded-full border-2 border-white/50 text-white hover:bg-white/10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" id="chevronIcon"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </div>
+      </div>
+      <!-- mobile dropdown -->
+      <div id="mobileMenu" class="lg:hidden overflow-hidden bg-white/10 backdrop-blur-md rounded-b-2xl border-t border-white/20 px-5">
+        <div class="flex flex-col py-4 space-y-3">
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/">Home</a>
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/about">About</a>
+          <a class="text-[15px] font-medium text-white hover:text-[#f5c518] font-semibold" href="/programs">Programs</a>
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/stories">Stories</a>
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/apply">Apply</a>
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/support">Support</a>
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <main class="min-h-screen pt-24 bg-gray-50">
+
+    <!-- ===== HERO SECTION (with background image) ===== -->
+    <section class="relative min-h-[55vh] flex items-center justify-center overflow-hidden">
+      <img src="https://rise-henna-pi.vercel.app/images/qwqwq.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-center">
+      <div class="absolute inset-0 bg-[#0d1b3e]/85"></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center py-28">
+        <span class="inline-block text-xs font-bold tracking-widest uppercase bg-[#f5c518] text-[#0d1b3e] px-4 py-1.5 rounded-full mb-5">Our Programs</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white text-balance mb-4">
+          Education <span class="font-semibold text-[#f5c518]">Pathways</span>
+        </h1>
+        <p class="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed text-balance">Two structured programmes designed to take high-potential students from where they are to where they deserve to be — in higher education, employment, and leadership.</p>
+      </div>
+    </section>
+
+    <!-- ===== YELLOW STRIP WITH FPP/APP TAGS ===== -->
+    <section class="bg-[#f5c518] py-5">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-16 text-[#0d1b3e]">
+          <div class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open w-5 h-5 flex-shrink-0">
+              <path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path>
+            </svg>
+            <span class="text-sm font-semibold">Future Pathways Program (FPP)</span>
+          </div>
+          <div class="hidden sm:block w-px h-6 bg-[#0d1b3e]/20"></div>
+          <div class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-5 h-5 flex-shrink-0">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            <span class="text-sm font-semibold">Access Pathways Program (APP)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FPP SECTION (with image and overlay) ===== -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-start mb-12">
+          <div class="space-y-5">
+            <div class="flex items-center gap-3">
+              <span class="inline-block text-xs font-bold tracking-widest uppercase bg-[#0d1b3e] text-[#f5c518] px-3 py-1 rounded-full">FPP</span>
+              <span class="text-xs text-[#0d1b3e]/50 font-medium">Education Pathways</span>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-light tracking-tight text-[#0d1b3e]">Future Pathways <span class="font-semibold">Program</span></h2>
+            <p class="text-[#0d1b3e]/65 leading-relaxed text-sm">A highly selective, residential programme for high-performing secondary school graduates. FPP is Pathways' flagship offering — an intensive environment designed to prepare exceptional students for higher education, personal formation, and lifelong leadership.</p>
+            <div class="grid grid-cols-2 gap-3 pt-2">
+              <div class="p-3 rounded-xl bg-[#0d1b3e]/5 border border-[#0d1b3e]/10">
+                <div class="flex items-center gap-2 mb-0.5">
+                  <svg class="lucide lucide-star w-4 h-4 text-[#f5c518]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+                  <span class="text-xs font-semibold text-[#0d1b3e]">Highly Selective</span>
+                </div>
+                <p class="text-xs text-[#0d1b3e]/50 pl-6">Competitive intake</p>
+              </div>
+              <div class="p-3 rounded-xl bg-[#0d1b3e]/5 border border-[#0d1b3e]/10">
+                <div class="flex items-center gap-2 mb-0.5">
+                  <svg class="lucide lucide-clock w-4 h-4 text-[#f5c518]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <span class="text-xs font-semibold text-[#0d1b3e]">18 Months</span>
+                </div>
+                <p class="text-xs text-[#0d1b3e]/50 pl-6">February – July (Year 2)</p>
+              </div>
+              <div class="p-3 rounded-xl bg-[#0d1b3e]/5 border border-[#0d1b3e]/10">
+                <div class="flex items-center gap-2 mb-0.5">
+                  <svg class="lucide lucide-target w-4 h-4 text-[#f5c518]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                  <span class="text-xs font-semibold text-[#0d1b3e]">Residential Phase</span>
+                </div>
+                <p class="text-xs text-[#0d1b3e]/50 pl-6">March – June (Year 1)</p>
+              </div>
+              <div class="p-3 rounded-xl bg-[#0d1b3e]/5 border border-[#0d1b3e]/10">
+                <div class="flex items-center gap-2 mb-0.5">
+                  <svg class="lucide lucide-graduation-cap w-4 h-4 text-[#f5c518]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+                  <span class="text-xs font-semibold text-[#0d1b3e]">University Focus</span>
+                </div>
+                <p class="text-xs text-[#0d1b3e]/50 pl-6">SAT, applications & essays</p>
+              </div>
+            </div>
+          </div>
+          <!-- FPP image with overlay -->
+          <div class="relative rounded-3xl overflow-hidden h-72 lg:h-80 shadow-xl">
+            <img src="https://rise-henna-pi.vercel.app/images/portrait-young-woman-with-laptop-hands-outside-school.jpg" alt="FPP Programme" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/70 to-transparent"></div>
+            <div class="absolute bottom-5 left-5 right-5">
+              <div class="inline-flex items-center gap-2 bg-[#f5c518] text-[#0d1b3e] px-3 py-1.5 rounded-full text-xs font-bold mb-2">
+                <svg class="lucide lucide-star w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+                Flagship Programme
+              </div>
+              <p class="text-white text-sm font-medium">Preparing the next generation of Zambian leaders</p>
+            </div>
+          </div>
+        </div>
+        <!-- FPP curriculum & outcomes (grid) -->
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="rounded-2xl border border-[#0d1b3e]/10 p-6">
+            <h3 class="text-base font-semibold text-[#0d1b3e] mb-4 flex items-center gap-2"><svg class="lucide lucide-book-open w-4 h-4 text-[#f5c518]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg> Curriculum</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3 text-sm text-[#0d1b3e]/70"><svg class="lucide lucide-circle-check-big w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg> Philosophy and Literature</li>
+              <li class="flex items-start gap-3 text-sm text-[#0d1b3e]/70"><svg class="lucide lucide-circle-check-big w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg> Spiritual Formation</li>
+              <li class="flex items-start gap-3 text-sm text-[#0d1b3e]/70"><svg class="lucide lucide-circle-check-big w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg> Physicality and the Disciplines</li>
+              <li class="flex items-start gap-3 text-sm text-[#0d1b3e]/70"><svg class="lucide lucide-circle-check-big w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg> University Preparation: SAT, Duolingo, college applications & essays</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-[#0d1b3e]/10 p-6">
+            <h3 class="text-base font-semibold text-[#0d1b3e] mb-4 flex items-center gap-2"><svg class="lucide lucide-target w-4 h-4 text-[#f5c518]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg> Student Outcomes</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3 text-sm text-[#0d1b3e]/70"><svg class="lucide lucide-arrow-right w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Guidance for local universities and mentorship</li>
+              <li class="flex items-start gap-3 text-sm text-[#0d1b3e]/70"><svg class="lucide lucide-arrow-right w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Access to internships, employment, or project roles</li>
+              <li class="flex items-start gap-3 text-sm text-[#0d1b3e]/70"><svg class="lucide lucide-arrow-right w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Personal formation and leadership development</li>
+              <li class="flex items-start gap-3 text-sm text-[#0d1b3e]/70"><svg class="lucide lucide-arrow-right w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> International university application support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NOTE SEPARATOR ===== -->
+    <section class="bg-[#0d1b3e]/5 border-y border-[#0d1b3e]/10 py-5">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <p class="text-xs text-[#0d1b3e]/55 leading-relaxed">
+          <span class="font-semibold text-[#0d1b3e]">Note:</span> FPP and APP are separate programmes to ensure fairness and sustainability. FPP is resource-intensive; APP provides continued access for other high-potential students.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== APP SECTION (dark background) ===== -->
+    <section class="py-16 bg-[#0d1b3e]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-start mb-12">
+          <div class="space-y-5 order-1">
+            <div class="flex items-center gap-3">
+              <span class="inline-block text-xs font-bold tracking-widest uppercase bg-[#f5c518] text-[#0d1b3e] px-3 py-1 rounded-full">APP</span>
+              <span class="text-xs text-white/40 font-medium">Education Pathways</span>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-light tracking-tight text-white">Access Pathways <span class="font-semibold text-[#f5c518]">Program</span></h2>
+            <p class="text-white/65 leading-relaxed text-sm">A one-year programme for high-potential students not selected for FPP. APP ensures that no student is left behind — providing real skills, mentorship, and pathways to opportunity regardless of FPP selection.</p>
+            <div class="grid grid-cols-2 gap-3 pt-2">
+              <div class="p-3 rounded-xl bg-white/5 border border-white/10">
+                <div class="flex items-center gap-2 mb-0.5">
+                  <svg class="lucide lucide-clock w-4 h-4 text-[#f5c518]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <span class="text-xs font-semibold text-white">1 Year</span>
+                </div>
+                <p class="text-xs text-white/45 pl-6">February – November</p>
+              </div>
+              <div class="p-3 rounded-xl bg-white/5 border border-white/10">
+                <div class="flex items-center gap-2 mb-0.5">
+                  <svg class="lucide lucide-briefcase w-4 h-4 text-[#f5c518]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
+                  <span class="text-xs font-semibold text-white">Work Experience</span>
+                </div>
+                <p class="text-xs text-white/45 pl-6">Embedded within Pathways</p>
+              </div>
+              <div class="p-3 rounded-xl bg-white/5 border border-white/10">
+                <div class="flex items-center gap-2 mb-0.5">
+                  <svg class="lucide lucide-graduation-cap w-4 h-4 text-[#f5c518]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+                  <span class="text-xs font-semibold text-white">University Guidance</span>
+                </div>
+                <p class="text-xs text-white/45 pl-6">Local & regional focus</p>
+              </div>
+              <div class="p-3 rounded-xl bg-white/5 border border-white/10">
+                <div class="flex items-center gap-2 mb-0.5">
+                  <svg class="lucide lucide-users w-4 h-4 text-[#f5c518]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  <span class="text-xs font-semibold text-white">Graduation</span>
+                </div>
+                <p class="text-xs text-white/45 pl-6">End of November</p>
+              </div>
+            </div>
+          </div>
+          <!-- APP image with overlay -->
+          <div class="relative rounded-3xl overflow-hidden h-72 lg:h-80 shadow-xl order-2">
+            <img src="https://rise-henna-pi.vercel.app/images/adorable-african-black-kids.jpg" alt="APP Programme" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/80 to-transparent"></div>
+            <div class="absolute bottom-5 left-5 right-5">
+              <div class="inline-flex items-center gap-2 bg-[#f5c518] text-[#0d1b3e] px-3 py-1.5 rounded-full text-xs font-bold mb-2">
+                <svg class="lucide lucide-users w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Access Programme
+              </div>
+              <p class="text-white text-sm font-medium">Skills, mentorship, and opportunity for every student</p>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-base font-semibold text-white/70 mb-5">Programme Components</h3>
+        <div class="grid md:grid-cols-3 gap-5 mb-10">
+          <div class="rounded-2xl bg-white/5 border border-white/10 p-6 hover:bg-white/10 transition">
+            <div class="flex items-start justify-between mb-4"><div class="w-10 h-10 rounded-xl bg-[#f5c518]/15 flex items-center justify-center"><svg class="lucide lucide-briefcase w-5 h-5 text-[#f5c518]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg></div><span class="text-3xl font-light text-white/10">01</span></div>
+            <h4 class="text-sm font-semibold text-white mb-2">Employment Pathways</h4>
+            <p class="text-xs text-white/55 leading-relaxed">Practical, hands-on work experience embedded within Pathways initiatives and partner organisations.</p>
+          </div>
+          <div class="rounded-2xl bg-white/5 border border-white/10 p-6 hover:bg-white/10 transition">
+            <div class="flex items-start justify-between mb-4"><div class="w-10 h-10 rounded-xl bg-[#f5c518]/15 flex items-center justify-center"><svg class="lucide lucide-globe w-5 h-5 text-[#f5c518]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div><span class="text-3xl font-light text-white/10">02</span></div>
+            <h4 class="text-sm font-semibold text-white mb-2">Educational Guidance</h4>
+            <p class="text-xs text-white/55 leading-relaxed">Local and regional university application support, with limited international university guidance.</p>
+          </div>
+          <div class="rounded-2xl bg-white/5 border border-white/10 p-6 hover:bg-white/10 transition">
+            <div class="flex items-start justify-between mb-4"><div class="w-10 h-10 rounded-xl bg-[#f5c518]/15 flex items-center justify-center"><svg class="lucide lucide-heart w-5 h-5 text-[#f5c518]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div><span class="text-3xl font-light text-white/10">03</span></div>
+            <h4 class="text-sm font-semibold text-white mb-2">Mentorship & Engagement</h4>
+            <p class="text-xs text-white/55 leading-relaxed">Continued one-on-one mentorship and long-term engagement with the Pathways community.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
+          <h3 class="text-base font-semibold text-white mb-4 flex items-center gap-2"><svg class="lucide lucide-target w-4 h-4 text-[#f5c518]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg> Student Outcomes</h3>
+          <div class="grid sm:grid-cols-2 gap-3">
+            <div class="flex items-start gap-3 text-sm text-white/65"><svg class="lucide lucide-arrow-right w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> University applications — local and regional</div>
+            <div class="flex items-start gap-3 text-sm text-white/65"><svg class="lucide lucide-arrow-right w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Practical skill-building and work experience</div>
+            <div class="flex items-start gap-3 text-sm text-white/65"><svg class="lucide lucide-arrow-right w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Long-term engagement with Pathways network</div>
+            <div class="flex items-start gap-3 text-sm text-white/65"><svg class="lucide lucide-arrow-right w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Mentorship and personal development</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== COMMUNITY PATHWAYS SECTION ===== -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-14">
+          <!-- community image -->
+          <div class="relative rounded-3xl overflow-hidden h-64 lg:h-80 shadow-xl">
+            <img src="https://rise-henna-pi.vercel.app/images/african-kids-enjoying-life.jpg" alt="Community Pathways" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/60 to-transparent"></div>
+            <div class="absolute bottom-5 left-5 right-5">
+              <div class="inline-flex items-center gap-2 bg-[#f5c518] text-[#0d1b3e] px-3 py-1.5 rounded-full text-xs font-bold mb-2">
+                <svg class="lucide lucide-heart w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                Community Programme
+              </div>
+              <p class="text-white text-sm font-medium">Enrichment, enterprise, and opportunity for all</p>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <span class="inline-block text-xs font-bold tracking-widest uppercase bg-[#0d1b3e] text-[#f5c518] px-4 py-1.5 rounded-full">Also Under Pathways</span>
+            <h2 class="text-3xl md:text-4xl font-light text-[#0d1b3e]">Community <span class="font-semibold">Pathways</span></h2>
+            <p class="text-[#0d1b3e]/65 text-sm leading-relaxed">Community Pathways supports the ecosystem and operations of Pathways — reaching youth, families, and communities across Zambia through enrichment, enterprise, employment, and strategic partnerships.</p>
+          </div>
+        </div>
+
+        <!-- 4 subprogram cards -->
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Children Enrichment -->
+          <div class="rounded-2xl border border-[#0d1b3e]/10 p-6 space-y-4">
+            <div class="flex items-start justify-between"><div class="w-10 h-10 rounded-xl bg-[#f5c518]/15 flex items-center justify-center"><svg class="lucide lucide-heart w-5 h-5 text-[#f5c518]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div><span class="text-3xl font-light text-[#0d1b3e]/10">01</span></div>
+            <h3 class="text-base font-semibold text-[#0d1b3e]">Children Enrichment Programs</h3>
+            <p class="text-sm text-[#0d1b3e]/60">Early literacy, reading clubs, creative arts, and emotional development for young children.</p>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2 text-sm text-[#0d1b3e]/70"><svg class="lucide lucide-circle-check-big w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg> Early literacy and reading clubs</li>
+              <li class="flex items-start gap-2 text-sm text-[#0d1b3e]/70"><svg class="lucide lucide-circle-check-big w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg> Creative arts and emotional development</li>
+              <li class="flex items-start gap-2 text-sm text-[#0d1b3e]/70"><svg class="lucide lucide-circle-check-big w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg> Partnerships with schools and caregivers</li>
+              <li class="flex items-start gap-2 text-sm text-[#0d1b3e]/70"><svg class="lucide lucide-circle-check-big w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg> Direct engagement with families</li>
+            </ul>
+          </div>
+
+          <!-- Small-Scale Enterprises -->
+          <div class="rounded-2xl border border-[#0d1b3e]/10 p-6 space-y-4">
+            <div class="flex items-start justify-between"><div class="w-10 h-10 rounded-xl bg-[#f5c518]/15 flex items-center justify-center"><svg class="lucide lucide-trending-up w-5 h-5 text-[#f5c518]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div><span class="text-3xl font-light text-[#0d1b3e]/10">02</span></div>
+            <h3 class="text-base font-semibold text-[#0d1b3e]">Small-Scale Enterprises</h3>
+            <p class="text-sm text-[#0d1b3e]/60">Operated in partnership with local community members to provide income, skills, and support for families.</p>
+            <p class="text-xs font-semibold text-[#0d1b3e]/45 uppercase tracking-wider pt-1">Profit Distribution</p>
+            <div class="space-y-3">
+              <div><div class="flex justify-between text-xs text-[#0d1b3e]/60 mb-1"><span>Community Members</span><span class="font-semibold text-[#0d1b3e]">50%</span></div><div class="h-1.5 rounded-full bg-[#0d1b3e]/10"><div class="h-full rounded-full bg-[#0d1b3e]" style="width:50%"></div></div></div>
+              <div><div class="flex justify-between text-xs text-[#0d1b3e]/60 mb-1"><span>Pathways Budget</span><span class="font-semibold text-[#0d1b3e]">25%</span></div><div class="h-1.5 rounded-full bg-[#0d1b3e]/10"><div class="h-full rounded-full bg-[#f5c518]" style="width:25%"></div></div></div>
+              <div><div class="flex justify-between text-xs text-[#0d1b3e]/60 mb-1"><span>Reinvested in Enterprise</span><span class="font-semibold text-[#0d1b3e]">25%</span></div><div class="h-1.5 rounded-full bg-[#0d1b3e]/10"><div class="h-full rounded-full bg-[#0d1b3e]/35" style="width:25%"></div></div></div>
+            </div>
+          </div>
+
+          <!-- Employment Pathways -->
+          <div class="rounded-2xl border border-[#0d1b3e]/10 p-6 space-y-4">
+            <div class="flex items-start justify-between"><div class="w-10 h-10 rounded-xl bg-[#f5c518]/15 flex items-center justify-center"><svg class="lucide lucide-users w-5 h-5 text-[#f5c518]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><span class="text-3xl font-light text-[#0d1b3e]/10">03</span></div>
+            <h3 class="text-base font-semibold text-[#0d1b3e]">Employment Pathways</h3>
+            <p class="text-sm text-[#0d1b3e]/60">All salaried staff, managers, and general workers. Functional groups report to the CEO or Academic Coordinator.</p>
+            <p class="text-xs font-semibold text-[#0d1b3e]/45 uppercase tracking-wider pt-1">Staff Categories</p>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2 text-sm text-[#0d1b3e]/70"><svg class="lucide lucide-arrow-right w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Teaching staff</li>
+              <li class="flex items-start gap-2 text-sm text-[#0d1b3e]/70"><svg class="lucide lucide-arrow-right w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Maintenance managers & personnel</li>
+              <li class="flex items-start gap-2 text-sm text-[#0d1b3e]/70"><svg class="lucide lucide-arrow-right w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Kitchen staff</li>
+              <li class="flex items-start gap-2 text-sm text-[#0d1b3e]/70"><svg class="lucide lucide-arrow-right w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Program & operational support</li>
+            </ul>
+          </div>
+
+          <!-- Partnerships Pathways -->
+          <div class="rounded-2xl border border-[#0d1b3e]/10 p-6 space-y-4">
+            <div class="flex items-start justify-between"><div class="w-10 h-10 rounded-xl bg-[#f5c518]/15 flex items-center justify-center"><svg class="lucide lucide-globe w-5 h-5 text-[#f5c518]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div><span class="text-3xl font-light text-[#0d1b3e]/10">04</span></div>
+            <h3 class="text-base font-semibold text-[#0d1b3e]">Partnerships Pathways</h3>
+            <p class="text-sm text-[#0d1b3e]/60">Formal relationships with external individuals, schools, organisations, and institutions, managed through MoUs detailing roles, scope, duration, and accountability.</p>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2 text-sm text-[#0d1b3e]/70"><svg class="lucide lucide-circle-check-big w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg> Schools and community organisations</li>
+              <li class="flex items-start gap-2 text-sm text-[#0d1b3e]/70"><svg class="lucide lucide-circle-check-big w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg> International collaborators</li>
+              <li class="flex items-start gap-2 text-sm text-[#0d1b3e]/70"><svg class="lucide lucide-circle-check-big w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg> Universities and academic institutions</li>
+              <li class="flex items-start gap-2 text-sm text-[#0d1b3e]/70"><svg class="lucide lucide-circle-check-big w-4 h-4 text-[#f5c518] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg> MoUs with defined roles, scope & accountability</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER (same as source) ===== -->
+    <footer class="bg-[#0d1b3e] border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div class="space-y-4">
+            <a class="flex items-center gap-2" href="/">
+              <img src="https://rise-henna-pi.vercel.app/main%20logo%20left.png" alt="Pathways" class="h-9 w-auto object-contain brightness-0 invert">
+              <img src="https://rise-henna-pi.vercel.app/logo%20right.png" alt="RISE Ubuntu" class="h-9 w-auto object-contain brightness-0 invert">
+            </a>
+            <p class="text-sm text-white/60">Pathways is an initiative of RISE Ubuntu, a registered non-profit organization in Zambia.</p>
+            <a href="mailto:info@pathways.org.zm" class="text-sm text-[#f5c518]/90 font-medium hover:text-[#f5c518]">info@pathways.org.zm</a>
+            <div class="flex gap-4"><!-- social icons --><a href="#" class="text-white/50 hover:text-[#f5c518]"><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="#" class="text-white/50 hover:text-[#f5c518]"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a><a href="#" class="text-white/50 hover:text-[#f5c518]"><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a href="#" class="text-white/50 hover:text-[#f5c518]"><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a></div>
+          </div>
+          <div><h4 class="font-semibold mb-4 text-white">Programs</h4><ul class="space-y-2 text-sm text-white/60"><li><a href="#" class="hover:text-[#f5c518]">Future Pathways (FPP)</a></li><li><a href="#" class="hover:text-[#f5c518]">Access Pathways (APP)</a></li><li><a href="#" class="hover:text-[#f5c518]">Children Enrichment</a></li><li><a href="#" class="hover:text-[#f5c518]">Employment Support</a></li><li><a href="#" class="hover:text-[#f5c518]">Small-Scale Enterprises</a></li></ul></div>
+          <div><h4 class="font-semibold mb-4 text-white">Organisation</h4><ul class="space-y-2 text-sm text-white/60"><li><a href="#" class="hover:text-[#f5c518]">About Pathways</a></li><li><a href="#" class="hover:text-[#f5c518]">Stories</a></li><li><a href="#" class="hover:text-[#f5c518]">Alumni Outcomes</a></li><li><a href="#" class="hover:text-[#f5c518]">Partnerships</a></li><li><a href="#" class="hover:text-[#f5c518]">Apply</a></li></ul></div>
+          <div><h4 class="font-semibold mb-4 text-white">Support</h4><ul class="space-y-2 text-sm text-white/60"><li><a href="#" class="hover:text-[#f5c518]">Donate</a></li><li><a href="#" class="hover:text-[#f5c518]">Become a Partner</a></li><li><a href="#" class="hover:text-[#f5c518]">Contact Us</a></li><li><a href="#" class="hover:text-[#f5c518]">Privacy Policy</a></li><li><a href="#" class="hover:text-[#f5c518]">Terms of Service</a></li></ul></div>
+        </div>
+        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-white/40">
+          <p>© 2025 Pathways. All rights reserved.</p>
+          <p>Pathways is an initiative of RISE Ubuntu, a registered non-profit organization in Zambia.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- mobile menu toggle script -->
+  <script>
+    (function() {
+      const toggle = document.getElementById('menuToggle');
+      const menu = document.getElementById('mobileMenu');
+      const chevron = document.getElementById('chevronIcon');
+      if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+          menu.classList.toggle('open');
+          chevron.style.transform = menu.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

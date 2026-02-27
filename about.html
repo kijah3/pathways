@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Pathways | RISE Ubuntu</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .text-gold { color: #f5c518; }
+    .bg-deep-navy { background-color: #0d1b3e; }
+    .border-gold\/60 { border-color: rgba(245, 197, 24, 0.6); }
+    .hover\:border-gold\/50:hover { border-color: rgba(245, 197, 24, 0.5); }
+    .bg-gold\/10 { background-color: rgba(245, 197, 24, 0.1); }
+    .from-deep-navy\/40 { --tw-gradient-from: rgba(13, 27, 62, 0.4); }
+    
+    #mobileMenu { transition: max-height 0.3s ease, opacity 0.2s; max-height: 0; opacity: 0; overflow: hidden; }
+    #mobileMenu.open { max-height: 400px; opacity: 1; }
+  </style>
+</head>
+<body class="antialiased text-gray-800">
+    <div class="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 pt-4">
+    <nav class="max-w-6xl mx-auto rounded-2xl transition-all duration-300 bg-white/15 backdrop-blur-md border border-white/30 shadow-lg">
+      <div class="px-5 lg:px-8 h-16 flex items-center justify-between">
+        <a class="flex items-center gap-2 flex-shrink-0" href="/">
+          <img src="img/mainlogoleft.png" alt="Pathways" class="h-8 w-auto object-contain">
+          <img src="img/logoright.png" alt="RISE Ubuntu" class="h-8 w-auto object-contain">
+        </a>
+        <div class="hidden lg:flex items-center gap-6">
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="index.html">Home</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white font-semibold underline underline-offset-4 decoration-[#f5c518]" href="about.html">About</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="programs.html">Programs</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="stories.html">Stories</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="apply.html">Apply</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="support.html">Support</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="contact,html">Contact</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <button class="inline-flex items-center justify-center bg-[#f5c518] text-[#0d1b3e] hover:bg-[#f5c518]/90 font-semibold rounded-full px-5 h-9 text-sm shadow-md">Apply Now</button>
+          <button id="menuToggle" type="button" aria-label="Toggle menu" class="lg:hidden flex items-center justify-center w-9 h-9 rounded-full border-2 border-white/50 text-white hover:bg-white/10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" id="chevronIcon"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </div>
+      </div>
+      <!-- mobile dropdown -->
+      <div id="mobileMenu" class="lg:hidden overflow-hidden bg-white/10 backdrop-blur-md rounded-b-2xl border-t border-white/20 px-5">
+        <div class="flex flex-col py-4 space-y-3">
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/">Home</a>
+          <a class="text-[15px] font-medium text-white hover:text-[#f5c518] font-semibold" href="/about">About</a>
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/programs">Programs</a>
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/stories">Stories</a>
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/apply">Apply</a>
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/support">Support</a>
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <main class="min-h-screen pt-24 bg-gray-50">
+    <!-- ===== HERO (about header) ===== -->
+    <section class="relative bg-[#0d1b3e] py-20 overflow-hidden">
+      <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-20"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0d1b3e] to-[#0d1b3e]/80"></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-light text-white mb-3">About <span class="font-semibold text-[#f5c518]">Pathways</span></h1>
+        <p class="text-xl text-white/80 max-w-2xl mx-auto">Who we are, what we believe, and how we serve young Zambians.</p>
+      </div>
+    </section>
+
+    <!-- ===== WHO WE ARE (overview + stats) ===== -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-light text-[#0d1b3e] mb-4">Who <span class="font-semibold">We Are</span></h2>
+            <p class="text-gray-700 leading-relaxed mb-4">Pathways is an initiative under RISE Ubuntu — providing education, mentorship, and community development programmes to equip young Zambians for life and leadership.</p>
+            <p class="text-gray-700 leading-relaxed mb-6">Pathways was created to address a fundamental gap: young people in Zambia who are capable and motivated but lack access to structured learning, mentorship, and opportunity. Operating under RISE Ubuntu, Pathways delivers two core programme streams — Education Pathways and Community Pathways — reaching students across five districts. Every programme is designed around the belief that young people, given the right environment and support, will build a stronger Zambia.</p>
+            <ul class="space-y-2 text-sm text-gray-700 list-disc list-inside marker:text-[#f5c518]">
+              <li>Structured academic and vocational education</li>
+              <li>One-on-one and group mentorship</li>
+              <li>Community enrichment and enterprise support</li>
+              <li>Employment readiness and employer linkages</li>
+            </ul>
+          </div>
+          <div class="bg-[#0d1b3e] text-white rounded-2xl p-8 shadow-xl">
+            <div class="text-center space-y-6">
+              <p class="text-lg italic font-light">“Building Futures in Zambia”</p>
+              <div class="grid grid-cols-2 gap-6">
+                <div>
+                  <div class="text-4xl font-bold text-[#f5c518]">1,200+</div>
+                  <div class="text-sm text-white/70">young people reached</div>
+                </div>
+                <div>
+                  <div class="text-4xl font-bold text-[#f5c518]">5</div>
+                  <div class="text-sm text-white/70">districts</div>
+                </div>
+              </div>
+              <p class="text-sm text-white/80 border-t border-white/20 pt-6">Pathways provides structured learning, mentorship & opportunity across Zambia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VISION & MISSION ===== -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-5xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-light text-[#0d1b3e]">Our <span class="font-semibold">Vision & Mission</span></h2>
+          <p class="text-gray-600 mt-2">The principles that guide everything we do.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white p-8 rounded-2xl shadow-md border-l-4 border-[#f5c518]">
+            <div class="w-12 h-12 bg-[#f5c518]/10 rounded-xl flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0d1b3e" stroke-width="1.5"><path d="M2 12h20M12 2v20"/></svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-[#0d1b3e] mb-3">Our Vision</h3>
+            <p class="text-gray-700 leading-relaxed">A Zambia where every young person — regardless of background — has access to the knowledge, skills, and networks needed to lead a purposeful, productive life and contribute meaningfully to their community and nation.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-md border-l-4 border-[#f5c518]">
+            <div class="w-12 h-12 bg-[#f5c518]/10 rounded-xl flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0d1b3e" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-[#0d1b3e] mb-3">Our Mission</h3>
+            <p class="text-gray-700 leading-relaxed italic">“To develop students into responsible, capable leaders.”</p>
+            <p class="text-gray-700 leading-relaxed mt-2">“To provide structured education, mentorship, and community engagement opportunities for youth.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GOVERNANCE (board & programme leaders) ===== -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-light text-[#0d1b3e] text-center mb-3">Our <span class="font-semibold">Governance</span></h2>
+        <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Pathways operates under the oversight of RISE Ubuntu's board and a dedicated team of programme leaders committed to accountability, transparency, and impact.</p>
+
+        <!-- board summary -->
+        <div class="bg-[#0d1b3e]/5 p-6 rounded-xl mb-12 border border-[#f5c518]/20">
+          <h3 class="text-xl font-semibold text-[#0d1b3e] mb-2">Board Oversight</h3>
+          <p class="text-gray-700">Pathways is governed by the RISE Ubuntu board of directors, which provides strategic direction, fiduciary oversight, and ensures all programmes align with the organisation's mission and values. The board includes representatives from education, civil society, and the private sector.</p>
+        </div>
+
+        <!-- key programme leaders grid (cards with initials) -->
+        <h3 class="text-2xl font-semibold text-[#0d1b3e] mb-6">Key Programme Leaders</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- PD -->
+          <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 hover:shadow-lg transition hover:border-[#f5c518]/50">
+            <div class="w-14 h-14 rounded-full bg-[#0d1b3e] text-white flex items-center justify-center text-xl font-bold mb-3">PD</div>
+            <h4 class="font-bold text-[#0d1b3e]">Programme Director</h4>
+            <p class="text-xs text-gray-500 mb-1">Education Pathways</p>
+            <p class="text-sm text-gray-700">Oversees the design and delivery of FPP and APP curricula across all districts.</p>
+          </div>
+          <!-- CM -->
+          <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 hover:shadow-lg transition hover:border-[#f5c518]/50">
+            <div class="w-14 h-14 rounded-full bg-[#0d1b3e] text-white flex items-center justify-center text-xl font-bold mb-3">CM</div>
+            <h4 class="font-bold text-[#0d1b3e]">Community Manager</h4>
+            <p class="text-xs text-gray-500 mb-1">Community Pathways</p>
+            <p class="text-sm text-gray-700">Coordinates enrichment, employment, and enterprise programmes at the community level.</p>
+          </div>
+          <!-- PL -->
+          <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 hover:shadow-lg transition hover:border-[#f5c518]/50">
+            <div class="w-14 h-14 rounded-full bg-[#0d1b3e] text-white flex items-center justify-center text-xl font-bold mb-3">PL</div>
+            <h4 class="font-bold text-[#0d1b3e]">Partnerships Lead</h4>
+            <p class="text-xs text-gray-500 mb-1">Stakeholder Relations</p>
+            <p class="text-sm text-gray-700">Manages relationships with NGO partners, government bodies, and corporate supporters.</p>
+          </div>
+          <!-- ME -->
+          <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 hover:shadow-lg transition hover:border-[#f5c518]/50">
+            <div class="w-14 h-14 rounded-full bg-[#0d1b3e] text-white flex items-center justify-center text-xl font-bold mb-3">ME</div>
+            <h4 class="font-bold text-[#0d1b3e]">Monitoring & Evaluation</h4>
+            <p class="text-xs text-gray-500 mb-1">Impact & Reporting</p>
+            <p class="text-sm text-gray-700">Tracks programme outcomes, alumni data, and produces impact reports for stakeholders.</p>
+          </div>
+        </div>
+
+        <!-- volunteer roles -->
+        <div class="mt-16">
+          <h3 class="text-2xl font-semibold text-[#0d1b3e] mb-6">Volunteer Roles</h3>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="p-4 border border-gray-200 rounded-xl hover:border-[#f5c518]/50">
+              <span class="bg-[#f5c518] text-[#0d1b3e] text-xs font-bold px-2 py-1 rounded-full">Classroom</span>
+              <h4 class="font-bold mt-2">Classroom Facilitator</h4>
+              <p class="text-xs text-gray-600">Support FPP or APP sessions as a co-facilitator alongside lead educators.</p>
+            </div>
+            <div class="p-4 border border-gray-200 rounded-xl hover:border-[#f5c518]/50">
+              <span class="bg-[#f5c518] text-[#0d1b3e] text-xs font-bold px-2 py-1 rounded-full">Mentor</span>
+              <h4 class="font-bold mt-2">Mentor</h4>
+              <p class="text-xs text-gray-600">Provide one-on-one guidance to students navigating higher education or career entry.</p>
+            </div>
+            <div class="p-4 border border-gray-200 rounded-xl hover:border-[#f5c518]/50">
+              <span class="bg-[#f5c518] text-[#0d1b3e] text-xs font-bold px-2 py-1 rounded-full">Outreach</span>
+              <h4 class="font-bold mt-2">Community Outreach</h4>
+              <p class="text-xs text-gray-600">Help plan and run community events, school visits, and awareness campaigns.</p>
+            </div>
+            <div class="p-4 border border-gray-200 rounded-xl hover:border-[#f5c518]/50">
+              <span class="bg-[#f5c518] text-[#0d1b3e] text-xs font-bold px-2 py-1 rounded-full">Advisory</span>
+              <h4 class="font-bold mt-2">Governance & Advisory</h4>
+              <p class="text-xs text-gray-600">Contribute professional expertise to programme design, policy, or board oversight.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RISE UBUNTU (parent organisation) ===== -->
+    <section class="py-16 bg-[#0d1b3e] text-white">
+      <div class="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+        <div class="mb-6">
+          <span class="bg-[#f5c518] text-[#0d1b3e] text-xs font-semibold px-4 py-1 rounded-full">RISE Ubuntu — Registered Non-Profit Zambia</span>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-light mb-4">About <span class="font-semibold text-[#f5c518]">RISE Ubuntu</span></h2>
+        <p class="text-white/80 max-w-2xl mx-auto leading-relaxed mb-8">RISE Ubuntu is a registered non-profit organisation based in Zambia, dedicated to the holistic development of young people and communities. "Ubuntu" — the African philosophy of shared humanity — sits at the heart of everything the organisation does.</p>
+        <p class="text-white/80 max-w-2xl mx-auto leading-relaxed mb-10">Through Pathways and other initiatives, RISE Ubuntu invests in education, leadership, and social enterprise as pathways out of poverty and into purpose. The organisation works in partnership with government, civil society, and the private sector to maximise reach and impact.</p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+          <div><div class="text-3xl font-bold text-[#f5c518]">2018</div><div class="text-sm text-white/60">Year Founded</div></div>
+          <div><div class="text-3xl font-bold text-[#f5c518]">5+</div><div class="text-sm text-white/60">Active Initiatives</div></div>
+          <div><div class="text-3xl font-bold text-[#f5c518]">10K+</div><div class="text-sm text-white/60">Lives Touched</div></div>
+          <div><div class="text-3xl font-bold text-[#f5c518]">Zambia</div><div class="text-sm text-white/60">Registered & Operating</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER (same as landing) ===== -->
+    <footer class="bg-[#0d1b3e] border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div class="space-y-4">
+            <a class="flex items-center gap-2" href="/">
+              <img src="https://placehold.co/110x38/ffffff/0d1b3e?text=PATHWAYS" alt="Pathways" class="h-9 w-auto object-contain brightness-0 invert">
+              <img src="https://placehold.co/110x38/f5c518/0d1b3e?text=RISE" alt="RISE Ubuntu" class="h-9 w-auto object-contain brightness-0 invert">
+            </a>
+            <p class="text-sm text-white/60">Pathways is an initiative of RISE Ubuntu, a registered non-profit organization in Zambia.</p>
+            <a href="mailto:info@pathways.org.zm" class="text-sm text-[#f5c518]/90 font-medium hover:text-[#f5c518]">info@pathways.org.zm</a>
+            <div class="flex gap-4"> <!-- social icons --><a href="#" class="text-white/50 hover:text-[#f5c518]"><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="#" class="text-white/50 hover:text-[#f5c518]"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a><a href="#" class="text-white/50 hover:text-[#f5c518]"><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a href="#" class="text-white/50 hover:text-[#f5c518]"><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a></div>
+          </div>
+          <!-- footer columns (abbreviated) -->
+          <div><h4 class="font-semibold mb-4 text-white">Programs</h4><ul class="space-y-2 text-sm text-white/60"><li><a href="#" class="hover:text-[#f5c518]">FPP</a></li><li><a href="#" class="hover:text-[#f5c518]">APP</a></li><li><a href="#" class="hover:text-[#f5c518]">Enrichment</a></li></ul></div>
+          <div><h4 class="font-semibold mb-4 text-white">Organisation</h4><ul class="space-y-2 text-sm text-white/60"><li><a href="#" class="hover:text-[#f5c518]">About</a></li><li><a href="#" class="hover:text-[#f5c518]">Stories</a></li><li><a href="#" class="hover:text-[#f5c518]">Apply</a></li></ul></div>
+          <div><h4 class="font-semibold mb-4 text-white">Support</h4><ul class="space-y-2 text-sm text-white/60"><li><a href="#" class="hover:text-[#f5c518]">Donate</a></li><li><a href="#" class="hover:text-[#f5c518]">Partner</a></li><li><a href="#" class="hover:text-[#f5c518]">Contact</a></li></ul></div>
+        </div>
+        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-sm text-white/40">
+          <p>© 2025 Pathways. All rights reserved.</p>
+          <p>Pathways is an initiative of RISE Ubuntu, a registered non-profit in Zambia.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- mobile menu toggle script -->
+  <script>
+    (function() {
+      const toggle = document.getElementById('menuToggle');
+      const menu = document.getElementById('mobileMenu');
+      const chevron = document.getElementById('chevronIcon');
+      if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+          menu.classList.toggle('open');
+          chevron.style.transform = menu.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

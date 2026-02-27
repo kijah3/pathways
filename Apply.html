@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply | Pathways | RISE Ubuntu</title>
+  <!-- Tailwind + Inter font -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .text-gold { color: #f5c518; }
+    .bg-deep-navy { background-color: #0d1b3e; }
+    .border-gold\/60 { border-color: rgba(245, 197, 24, 0.6); }
+    .from-deep-navy\/40 { --tw-gradient-from: rgba(13, 27, 62, 0.4); }
+    /* mobile menu toggle */
+    #mobileMenu { transition: max-height 0.3s ease, opacity 0.2s; max-height: 0; opacity: 0; overflow: hidden; }
+    #mobileMenu.open { max-height: 400px; opacity: 1; }
+    /* timeline number style */
+    .timeline-number { background: #0d1b3e; color: #f5c518; }
+  </style>
+</head>
+<body class="antialiased text-gray-800">
+
+  <!-- ===== fixed navbar (identical to other pages, apply active) ===== -->
+  <div class="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 pt-4">
+    <nav class="max-w-6xl mx-auto rounded-2xl transition-all duration-300 bg-white/15 backdrop-blur-md border border-white/30 shadow-lg">
+      <div class="px-5 lg:px-8 h-16 flex items-center justify-between">
+        <a class="flex items-center gap-2 flex-shrink-0" href="/">
+          <img src="https://placehold.co/110x38/0d1b3e/white?text=PATHWAYS" alt="Pathways" class="h-8 w-auto object-contain">
+          <img src="https://placehold.co/110x38/f5c518/0d1b3e?text=RISE" alt="RISE Ubuntu" class="h-8 w-auto object-contain">
+        </a>
+        <div class="hidden lg:flex items-center gap-6">
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="/">Home</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="/about">About</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="/programs">Programs</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="/stories">Stories</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white font-semibold underline underline-offset-4 decoration-[#f5c518]" href="/apply">Apply</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="/support">Support</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="/contact">Contact</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <button class="inline-flex items-center justify-center bg-[#f5c518] text-[#0d1b3e] hover:bg-[#f5c518]/90 font-semibold rounded-full px-5 h-9 text-sm shadow-md">Apply Now</button>
+          <button id="menuToggle" type="button" aria-label="Toggle menu" class="lg:hidden flex items-center justify-center w-9 h-9 rounded-full border-2 border-white/50 text-white hover:bg-white/10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" id="chevronIcon"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </div>
+      </div>
+      <!-- mobile dropdown -->
+      <div id="mobileMenu" class="lg:hidden overflow-hidden bg-white/10 backdrop-blur-md rounded-b-2xl border-t border-white/20 px-5">
+        <div class="flex flex-col py-4 space-y-3">
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/">Home</a>
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/about">About</a>
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/programs">Programs</a>
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/stories">Stories</a>
+          <a class="text-[15px] font-medium text-white hover:text-[#f5c518] font-semibold" href="/apply">Apply</a>
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/support">Support</a>
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <main class="min-h-screen pt-24 bg-gray-50">
+
+    <!-- ===== HERO : Apply ===== -->
+    <section class="relative bg-[#0d1b3e] py-20 overflow-hidden">
+      <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-20"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0d1b3e] to-[#0d1b3e]/80"></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <span class="inline-block text-xs font-bold tracking-widest uppercase bg-[#f5c518] text-[#0d1b3e] px-4 py-1.5 rounded-full mb-5">Apply</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-3">Start Your <span class="font-semibold text-[#f5c518]">Pathways</span> Journey</h1>
+        <p class="text-xl text-white/80 max-w-2xl mx-auto">Applications are open for the Future Pathways Program and Access Pathways Program. Join a community of exceptional young Zambians.</p>
+      </div>
+    </section>
+
+    <!-- ===== CHOOSE YOUR PROGRAMME ===== -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-light text-[#0d1b3e] mb-3">Choose Your <span class="font-semibold">Programme</span></h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Read the eligibility criteria carefully before applying. You may only apply to one programme per intake.</p>
+        </div>
+
+        <!-- two cards: FPP and APP -->
+        <div class="grid lg:grid-cols-2 gap-8">
+          <!-- FPP card -->
+          <div class="bg-gray-50 rounded-2xl border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition">
+            <div class="h-2 bg-[#f5c518]"></div>
+            <div class="p-6 md:p-8">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="bg-[#f5c518] text-[#0d1b3e] text-xs font-bold px-3 py-1 rounded-full">FPP</span>
+                <span class="text-xs uppercase tracking-wider bg-[#0d1b3e]/10 text-[#0d1b3e] px-3 py-1 rounded-full">Flagship Programme</span>
+              </div>
+              <h3 class="text-2xl font-bold text-[#0d1b3e] mb-2">Future Pathways Program</h3>
+              <p class="text-sm text-gray-700 mb-5">Highly selective 18-month residential programme for top-performing secondary school graduates — focused on higher education, personal formation, and leadership.</p>
+              <h4 class="font-semibold text-[#0d1b3e] text-sm mb-3">Eligibility Criteria</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-2 text-sm text-gray-700"><svg class="w-4 h-4 text-[#f5c518] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Completed Grade 12 (secondary school graduate)</li>
+                <li class="flex items-start gap-2 text-sm text-gray-700"><svg class="w-4 h-4 text-[#f5c518] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Demonstrated academic excellence</li>
+                <li class="flex items-start gap-2 text-sm text-gray-700"><svg class="w-4 h-4 text-[#f5c518] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Zambian national or resident</li>
+                <li class="flex items-start gap-2 text-sm text-gray-700"><svg class="w-4 h-4 text-[#f5c518] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Willing to commit to the residential phase (Year 1)</li>
+                <li class="flex items-start gap-2 text-sm text-gray-700"><svg class="w-4 h-4 text-[#f5c518] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Strong motivation for higher education or leadership</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- APP card -->
+          <div class="bg-gray-50 rounded-2xl border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition">
+            <div class="h-2 bg-[#f5c518]"></div>
+            <div class="p-6 md:p-8">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="bg-[#f5c518] text-[#0d1b3e] text-xs font-bold px-3 py-1 rounded-full">APP</span>
+                <span class="text-xs uppercase tracking-wider bg-[#0d1b3e]/10 text-[#0d1b3e] px-3 py-1 rounded-full">Access Programme</span>
+              </div>
+              <h3 class="text-2xl font-bold text-[#0d1b3e] mb-2">Access Pathways Program</h3>
+              <p class="text-sm text-gray-700 mb-5">A one-year programme for high-potential students providing mentorship, work experience, and university guidance — ensuring no student is left behind.</p>
+              <h4 class="font-semibold text-[#0d1b3e] text-sm mb-3">Eligibility Criteria</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-2 text-sm text-gray-700"><svg class="w-4 h-4 text-[#f5c518] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Completed Grade 12</li>
+                <li class="flex items-start gap-2 text-sm text-gray-700"><svg class="w-4 h-4 text-[#f5c518] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Not selected for FPP intake</li>
+                <li class="flex items-start gap-2 text-sm text-gray-700"><svg class="w-4 h-4 text-[#f5c518] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Motivated and coachable</li>
+                <li class="flex items-start gap-2 text-sm text-gray-700"><svg class="w-4 h-4 text-[#f5c518] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Zambian national or resident</li>
+                <li class="flex items-start gap-2 text-sm text-gray-700"><svg class="w-4 h-4 text-[#f5c518] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Willing to engage consistently over 12 months</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== APPLICATION TIMELINE ===== -->
+    <section class="py-16 bg-gray-100">
+      <div class="max-w-5xl mx-auto px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-light text-[#0d1b3e] text-center mb-4">Application <span class="font-semibold">Timeline</span></h2>
+        <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">What to expect after you apply.</p>
+
+        <div class="grid md:grid-cols-5 gap-4 relative">
+          <!-- connecting line (hidden on mobile) -->
+          <div class="hidden md:block absolute top-8 left-[10%] right-[10%] h-0.5 bg-[#f5c518]/30 -z-0"></div>
+
+          <!-- step 1 -->
+          <div class="relative z-10 flex flex-col items-center text-center">
+            <div class="w-16 h-16 rounded-full timeline-number flex items-center justify-center text-xl font-bold mb-3">1</div>
+            <h3 class="font-bold text-[#0d1b3e] text-base">Applications Open</h3>
+            <p class="text-xs font-semibold text-[#f5c518] mt-1">October – November</p>
+            <p class="text-xs text-gray-600 mt-2">Submit your application form online or drop it off in person at a Pathways office.</p>
+          </div>
+
+          <!-- step 2 -->
+          <div class="relative z-10 flex flex-col items-center text-center">
+            <div class="w-16 h-16 rounded-full timeline-number flex items-center justify-center text-xl font-bold mb-3">2</div>
+            <h3 class="font-bold text-[#0d1b3e] text-base">Shortlisting</h3>
+            <p class="text-xs font-semibold text-[#f5c518] mt-1">December</p>
+            <p class="text-xs text-gray-600 mt-2">The admissions team reviews all applications and prepares a shortlist.</p>
+          </div>
+
+          <!-- step 3 -->
+          <div class="relative z-10 flex flex-col items-center text-center">
+            <div class="w-16 h-16 rounded-full timeline-number flex items-center justify-center text-xl font-bold mb-3">3</div>
+            <h3 class="font-bold text-[#0d1b3e] text-base">Interviews</h3>
+            <p class="text-xs font-semibold text-[#f5c518] mt-1">December – January</p>
+            <p class="text-xs text-gray-600 mt-2">Shortlisted candidates are contacted and invited to interview.</p>
+          </div>
+
+          <!-- step 4 -->
+          <div class="relative z-10 flex flex-col items-center text-center">
+            <div class="w-16 h-16 rounded-full timeline-number flex items-center justify-center text-xl font-bold mb-3">4</div>
+            <h3 class="font-bold text-[#0d1b3e] text-base">Selection & Offers</h3>
+            <p class="text-xs font-semibold text-[#f5c518] mt-1">January</p>
+            <p class="text-xs text-gray-600 mt-2">Successful applicants are notified and offered a place in their programme.</p>
+          </div>
+
+          <!-- step 5 -->
+          <div class="relative z-10 flex flex-col items-center text-center">
+            <div class="w-16 h-16 rounded-full timeline-number flex items-center justify-center text-xl font-bold mb-3">5</div>
+            <h3 class="font-bold text-[#0d1b3e] text-base">Programme Begins</h3>
+            <p class="text-xs font-semibold text-[#f5c518] mt-1">February</p>
+            <p class="text-xs text-gray-600 mt-2">FPP residential phase begins. APP orientation and induction starts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== QUESTIONS / CONTACT ===== -->
+    <section class="py-16 bg-white">
+      <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+        <div class="space-y-5">
+          <div class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#f5c518] text-[#0d1b3e] mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.574 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <h3 class="text-2xl md:text-3xl font-light text-[#0d1b3e]">Questions about applying?</h3>
+          <p class="text-[#0d1b3e]/70 max-w-xl mx-auto text-balance">Our team is happy to help. Reach out and we will respond within 48 hours.</p>
+          <a href="mailto:info@pathways.org.zm" class="inline-block text-xl font-semibold text-[#f5c518] bg-[#0d1b3e] px-8 py-3 rounded-full hover:bg-[#0d1b3e]/90 transition">info@pathways.org.zm</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER (same as other pages) ===== -->
+    <footer class="bg-[#0d1b3e] border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <!-- Column 1 -->
+          <div class="space-y-4">
+            <a class="flex items-center gap-2" href="/">
+              <img src="https://placehold.co/110x38/ffffff/0d1b3e?text=PATHWAYS" alt="Pathways" class="h-9 w-auto object-contain brightness-0 invert">
+              <img src="https://placehold.co/110x38/f5c518/0d1b3e?text=RISE" alt="RISE Ubuntu" class="h-9 w-auto object-contain brightness-0 invert">
+            </a>
+            <p class="text-sm text-white/60">Pathways is an initiative of RISE Ubuntu, a registered non-profit organization in Zambia.</p>
+            <a href="mailto:info@pathways.org.zm" class="text-sm text-[#f5c518]/90 font-medium hover:text-[#f5c518] block">info@pathways.org.zm</a>
+            <div class="flex gap-4">
+              <a href="#" class="text-white/50 hover:text-[#f5c518]"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+              <a href="#" class="text-white/50 hover:text-[#f5c518]"><svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+              <a href="#" class="text-white/50 hover:text-[#f5c518]"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <a href="#" class="text-white/50 hover:text-[#f5c518]"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+            </div>
+          </div>
+          <!-- Column 2 -->
+          <div><h4 class="font-semibold mb-4 text-white">Programs</h4><ul class="space-y-2 text-sm text-white/60"><li><a href="#" class="hover:text-[#f5c518]">Future Pathways (FPP)</a></li><li><a href="#" class="hover:text-[#f5c518]">Access Pathways (APP)</a></li><li><a href="#" class="hover:text-[#f5c518]">Children Enrichment</a></li><li><a href="#" class="hover:text-[#f5c518]">Employment Support</a></li><li><a href="#" class="hover:text-[#f5c518]">Small-Scale Enterprises</a></li></ul></div>
+          <!-- Column 3 -->
+          <div><h4 class="font-semibold mb-4 text-white">Organisation</h4><ul class="space-y-2 text-sm text-white/60"><li><a href="#" class="hover:text-[#f5c518]">About Pathways</a></li><li><a href="#" class="hover:text-[#f5c518]">Stories</a></li><li><a href="#" class="hover:text-[#f5c518]">Alumni Outcomes</a></li><li><a href="#" class="hover:text-[#f5c518]">Partnerships</a></li><li><a href="#" class="hover:text-[#f5c518]">Apply</a></li></ul></div>
+          <!-- Column 4 -->
+          <div><h4 class="font-semibold mb-4 text-white">Support</h4><ul class="space-y-2 text-sm text-white/60"><li><a href="#" class="hover:text-[#f5c518]">Donate</a></li><li><a href="#" class="hover:text-[#f5c518]">Become a Partner</a></li><li><a href="#" class="hover:text-[#f5c518]">Contact Us</a></li><li><a href="#" class="hover:text-[#f5c518]">Privacy Policy</a></li><li><a href="#" class="hover:text-[#f5c518]">Terms of Service</a></li></ul></div>
+        </div>
+        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-white/40">
+          <p>© 2025 Pathways. All rights reserved.</p>
+          <p class="text-center md:text-right">Pathways is an initiative of RISE Ubuntu, a registered non-profit organization in Zambia.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- mobile menu toggle script -->
+  <script>
+    (function() {
+      const toggle = document.getElementById('menuToggle');
+      const menu = document.getElementById('mobileMenu');
+      const chevron = document.getElementById('chevronIcon');
+      if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+          menu.classList.toggle('open');
+          chevron.style.transform = menu.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
