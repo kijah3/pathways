@@ -13,10 +13,20 @@
     .border-gold\/60 { border-color: rgba(245, 197, 24, 0.6); }
     .hover\:border-gold\/50:hover { border-color: rgba(245, 197, 24, 0.5); }
     .bg-gold\/10 { background-color: rgba(245, 197, 24, 0.1); }
-    .from-deep-navy\/40 { --tw-gradient-from: rgba(13, 27, 62, 0.4); }
+    .from-deep-navy\/75 { --tw-gradient-from: rgba(13, 27, 62, 0.75); }
+    .via-deep-navy\/55 { --tw-gradient-via: rgba(13, 27, 62, 0.55); }
+    .to-deep-navy\/80 { --tw-gradient-to: rgba(13, 27, 62, 0.8); }
     
     #mobileMenu { transition: max-height 0.3s ease, opacity 0.2s; max-height: 0; opacity: 0; overflow: hidden; }
     #mobileMenu.open { max-height: 400px; opacity: 1; }
+
+    /* hero background (same as index) */
+    .hero-bg {
+      background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
   </style>
 </head>
 <body class="antialiased text-gray-800">
@@ -44,7 +54,7 @@
           </button>
         </div>
       </div>
-      <!-- mobile dropdown (fixed hrefs) -->
+      <!-- mobile dropdown -->
       <div id="mobileMenu" class="lg:hidden overflow-hidden bg-white/10 backdrop-blur-md rounded-b-2xl border-t border-white/20 px-5">
         <div class="flex flex-col py-4 space-y-3">
           <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="index.html">Home</a>
@@ -59,14 +69,40 @@
     </nav>
   </div>
 
-  <main class="min-h-screen pt-24 bg-gray-50">
-    <!-- ===== HERO (about header) ===== -->
-    <section class="relative bg-[#0d1b3e] py-20 overflow-hidden">
-      <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-20"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-[#0d1b3e] to-[#0d1b3e]/80"></div>
-      <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
-        <h1 class="text-4xl md:text-5xl font-light text-white mb-3">About <span class="font-semibold text-[#f5c518]">Pathways</span></h1>
-        <p class="text-xl text-white/80 max-w-2xl mx-auto">Who we are, what we believe, and how we serve young Zambians.</p>
+  <main class="min-h-screen bg-gray-50">
+    <!-- ===== HERO (full-screen, identical to index) ===== -->
+    <section class="relative min-h-screen flex items-center justify-center hero-bg">
+      <!-- overlays (same as index) -->
+      <div class="absolute inset-0 z-[5] bg-black/25"></div>
+      <div class="absolute inset-0 z-10 bg-gradient-to-b from-[#0d1b3e]/75 via-[#0d1b3e]/55 to-[#0d1b3e]/80"></div>
+      
+      <div class="relative z-20 max-w-4xl mx-auto px-6 lg:px-8 text-center py-20">
+        <div class="space-y-5">
+          <h1 class="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight text-balance text-white drop-shadow-lg">
+            About <span class="block font-semibold mt-1 text-[#f5c518]">Pathways</span>
+          </h1>
+          <p class="text-lg md:text-xl text-white/75 max-w-xl mx-auto text-balance leading-relaxed">
+            Who we are, what we believe, and how we serve young Zambians.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
+            <button class="inline-flex items-center justify-center gap-2 bg-[#f5c518] text-[#0d1b3e] hover:bg-[#f5c518]/90 font-semibold rounded-full px-7 h-11 text-sm group shadow-lg">
+              Apply Now
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform">
+                <path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </button>
+            <button class="inline-flex items-center justify-center gap-2 font-medium rounded-full px-7 h-11 text-sm border-2 border-white/50 text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm">
+              Support Pathways
+            </button>
+          </div>
+        </div>
+
+        <!-- stats (optional, can be kept or removed) -->
+        <div class="grid grid-cols-3 gap-6 md:gap-12 max-w-2xl mx-auto mt-12 pt-8 border-t border-white/20">
+          <div class="space-y-1"><div class="text-3xl md:text-4xl font-light text-white">1,200+</div><div class="text-xs text-white/60">Students Reached</div></div>
+          <div class="space-y-1"><div class="text-3xl md:text-4xl font-light text-white">5</div><div class="text-xs text-white/60">Districts</div></div>
+          <div class="space-y-1"><div class="text-3xl md:text-4xl font-light text-white">2018</div><div class="text-xs text-white/60">Founded</div></div>
+        </div>
       </div>
     </section>
 
