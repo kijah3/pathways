@@ -13,30 +13,42 @@
     .bg-deep-navy { background-color: #0d1b3e; }
     .border-gold\/60 { border-color: rgba(245, 197, 24, 0.6); }
     .hover\:border-gold\/50:hover { border-color: rgba(245, 197, 24, 0.5); }
-    .from-deep-navy\/40 { --tw-gradient-from: rgba(13, 27, 62, 0.4); }
+    .from-deep-navy\/75 { --tw-gradient-from: rgba(13, 27, 62, 0.75); }
+    .via-deep-navy\/55 { --tw-gradient-via: rgba(13, 27, 62, 0.55); }
+    .to-deep-navy\/80 { --tw-gradient-to: rgba(13, 27, 62, 0.8); }
+
     /* mobile menu toggle */
     #mobileMenu { transition: max-height 0.3s ease, opacity 0.2s; max-height: 0; opacity: 0; overflow: hidden; }
     #mobileMenu.open { max-height: 400px; opacity: 1; }
+
+    /* hero background (same as index & about) */
+    .hero-bg {
+      background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
   </style>
 </head>
 <body class="antialiased text-gray-800">
 
-  <!-- ===== fixed navbar (identical to other pages, stories active) ===== -->
+  <!-- ===== fixed navbar (identical to other pages, with .html links) ===== -->
   <div class="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 pt-4">
     <nav class="max-w-6xl mx-auto rounded-2xl transition-all duration-300 bg-white/15 backdrop-blur-md border border-white/30 shadow-lg">
       <div class="px-5 lg:px-8 h-16 flex items-center justify-between">
         <a class="flex items-center gap-2 flex-shrink-0" href="/">
-          <img src="https://placehold.co/110x38/0d1b3e/white?text=PATHWAYS" alt="Pathways" class="h-8 w-auto object-contain">
-          <img src="https://placehold.co/110x38/f5c518/0d1b3e?text=RISE" alt="RISE Ubuntu" class="h-8 w-auto object-contain">
+          <!-- using same logo URLs as about/programs pages -->
+          <img src="https://rise-henna-pi.vercel.app/main%20logo%20left.png" alt="Pathways" class="h-8 w-auto object-contain">
+          <img src="https://rise-henna-pi.vercel.app/logo%20right.png" alt="RISE Ubuntu" class="h-8 w-auto object-contain">
         </a>
         <div class="hidden lg:flex items-center gap-6">
-          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="/">Home</a>
-          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="/about">About</a>
-          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="/programs">Programs</a>
-          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white font-semibold underline underline-offset-4 decoration-[#f5c518]" href="/stories">Stories</a>
-          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="/apply">Apply</a>
-          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="/support">Support</a>
-          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="/contact">Contact</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="index.html">Home</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="about.html">About</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="programs.html">Programs</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white font-semibold underline underline-offset-4 decoration-[#f5c518]" href="stories.html">Stories</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="apply.html">Apply</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="support.html">Support</a>
+          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="contact.html">Contact</a>
         </div>
         <div class="flex items-center gap-2">
           <button class="inline-flex items-center justify-center bg-[#f5c518] text-[#0d1b3e] hover:bg-[#f5c518]/90 font-semibold rounded-full px-5 h-9 text-sm shadow-md">Apply Now</button>
@@ -45,31 +57,50 @@
           </button>
         </div>
       </div>
-      <!-- mobile dropdown -->
+      <!-- mobile dropdown (corrected to .html) -->
       <div id="mobileMenu" class="lg:hidden overflow-hidden bg-white/10 backdrop-blur-md rounded-b-2xl border-t border-white/20 px-5">
         <div class="flex flex-col py-4 space-y-3">
-          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/">Home</a>
-          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/about">About</a>
-          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/programs">Programs</a>
-          <a class="text-[15px] font-medium text-white hover:text-[#f5c518] font-semibold" href="/stories">Stories</a>
-          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/apply">Apply</a>
-          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/support">Support</a>
-          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="/contact">Contact</a>
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="index.html">Home</a>
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="about.html">About</a>
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="programs.html">Programs</a>
+          <a class="text-[15px] font-medium text-white hover:text-[#f5c518] font-semibold" href="stories.html">Stories</a>
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="apply.html">Apply</a>
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="support.html">Support</a>
+          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="contact.html">Contact</a>
         </div>
       </div>
     </nav>
   </div>
 
-  <main class="min-h-screen pt-24 bg-gray-50">
+  <main class="min-h-screen bg-gray-50">
 
-    <!-- ===== HERO : Stories ===== -->
-    <section class="relative bg-[#0d1b3e] py-20 overflow-hidden">
-      <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070')] bg-cover bg-center opacity-20"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-[#0d1b3e] to-[#0d1b3e]/80"></div>
-      <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
-        <span class="inline-block text-xs font-bold tracking-widest uppercase bg-[#f5c518] text-[#0d1b3e] px-4 py-1.5 rounded-full mb-5">Stories & Reflections</span>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-3">Real <span class="font-semibold text-[#f5c518]">Voices</span></h1>
-        <p class="text-xl text-white/80 max-w-2xl mx-auto">Student essays, alumni reflections, and community stories from the people whose lives have been shaped by Pathways.</p>
+    <!-- ===== HERO – full screen, same as index ===== -->
+    <section class="relative min-h-screen flex items-center justify-center hero-bg">
+      <!-- overlays (same as index) -->
+      <div class="absolute inset-0 z-[5] bg-black/25"></div>
+      <div class="absolute inset-0 z-10 bg-gradient-to-b from-[#0d1b3e]/75 via-[#0d1b3e]/55 to-[#0d1b3e]/80"></div>
+
+      <div class="relative z-20 max-w-4xl mx-auto px-6 lg:px-8 text-center py-20">
+        <div class="space-y-6">
+          <span class="inline-block text-xs font-bold tracking-widest uppercase bg-[#f5c518] text-[#0d1b3e] px-4 py-1.5 rounded-full shadow-lg">Stories & Reflections</span>
+          <h1 class="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight text-white drop-shadow-lg">
+            Real <span class="font-semibold text-[#f5c518]">Voices</span>
+          </h1>
+          <p class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed text-balance">
+            Student essays, alumni reflections, and community stories from the people whose lives have been shaped by Pathways.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
+            <button class="inline-flex items-center justify-center gap-2 bg-[#f5c518] text-[#0d1b3e] hover:bg-[#f5c518]/90 font-semibold rounded-full px-7 h-11 text-sm group shadow-lg">
+              Read Stories
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform">
+                <path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </button>
+            <button class="inline-flex items-center justify-center gap-2 font-medium rounded-full px-7 h-11 text-sm border-2 border-white/50 text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm">
+              Share Your Story
+            </button>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -116,7 +147,7 @@
             <p class="text-gray-700 italic">"Before Pathways, I had no direction. The programme taught me how to think, how to plan, and most importantly — how to believe in myself. Today I run a small tailoring business that supports my family."</p>
           </div>
 
-          <!-- story card 2 (repeat for balance, using content from URL) -->
+          <!-- story card 2 -->
           <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-200 hover:shadow-xl transition">
             <div class="flex items-start gap-4 mb-4">
               <div class="w-12 h-12 rounded-full bg-[#0d1b3e] text-white flex items-center justify-center text-lg font-bold flex-shrink-0">MT</div>
@@ -129,7 +160,7 @@
             <p class="text-gray-700 italic">"The job readiness workshop gave me the confidence to walk into interviews. Within six weeks of completing the programme I had secured my first formal employment."</p>
           </div>
 
-          <!-- story card 3 (extra to enrich section) -->
+          <!-- story card 3 -->
           <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-200 hover:shadow-xl transition md:col-span-2 lg:col-span-1">
             <div class="flex items-start gap-4 mb-4">
               <div class="w-12 h-12 rounded-full bg-[#0d1b3e] text-white flex items-center justify-center text-lg font-bold flex-shrink-0">BK</div>
@@ -160,7 +191,7 @@
             <p class="text-xs text-gray-400 mt-4">March 15, 2025</p>
           </div>
 
-          <!-- update card 2 (additional to match real site) -->
+          <!-- update card 2 -->
           <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md transition">
             <span class="inline-block bg-[#f5c518] text-[#0d1b3e] text-xs font-bold px-3 py-1 rounded-full mb-3">Enterprise</span>
             <h3 class="text-xl font-semibold text-[#0d1b3e] mb-2">New SSE Poultry Project — Lusaka</h3>
@@ -181,35 +212,65 @@
       </div>
     </section>
 
-    <!-- ===== FOOTER (same as other pages) ===== -->
+    <!-- ===== FOOTER with three stacked lines and credit ===== -->
     <footer class="bg-[#0d1b3e] border-t border-white/10">
       <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10">
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          <!-- Column 1 -->
+          <!-- col1 -->
           <div class="space-y-4">
             <a class="flex items-center gap-2" href="/">
-              <img src="https://placehold.co/110x38/ffffff/0d1b3e?text=PATHWAYS" alt="Pathways" class="h-9 w-auto object-contain brightness-0 invert">
-              <img src="https://placehold.co/110x38/f5c518/0d1b3e?text=RISE" alt="RISE Ubuntu" class="h-9 w-auto object-contain brightness-0 invert">
+              <img src="https://rise-henna-pi.vercel.app/main%20logo%20left.png" alt="Pathways" class="h-9 w-auto object-contain brightness-0 invert">
+              <img src="https://rise-henna-pi.vercel.app/logo%20right.png" alt="RISE Ubuntu" class="h-9 w-auto object-contain brightness-0 invert">
             </a>
             <p class="text-sm text-white/60">Pathways is an initiative of RISE Ubuntu, a registered non-profit organization in Zambia.</p>
-            <a href="mailto:info@pathways.org.zm" class="text-sm text-[#f5c518]/90 font-medium hover:text-[#f5c518] block">info@pathways.org.zm</a>
+            <a href="mailto:info@pathways.org.zm" class="text-sm text-[#f5c518]/90 font-medium hover:text-[#f5c518] transition-colors">info@pathways.org.zm</a>
             <div class="flex gap-4">
-              <a href="#" class="text-white/50 hover:text-[#f5c518]"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-              <a href="#" class="text-white/50 hover:text-[#f5c518]"><svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-              <a href="#" class="text-white/50 hover:text-[#f5c518]"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-              <a href="#" class="text-white/50 hover:text-[#f5c518]"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+              <a href="#" aria-label="Facebook" class="text-white/50 hover:text-[#f5c518]"><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+              <a href="#" aria-label="Instagram" class="text-white/50 hover:text-[#f5c518]"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              <a href="#" aria-label="Twitter" class="text-white/50 hover:text-[#f5c518]"><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <a href="#" aria-label="YouTube" class="text-white/50 hover:text-[#f5c518]"><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
             </div>
           </div>
-          <!-- Column 2 -->
-          <div><h4 class="font-semibold mb-4 text-white">Programs</h4><ul class="space-y-2 text-sm text-white/60"><li><a href="#" class="hover:text-[#f5c518]">Future Pathways (FPP)</a></li><li><a href="#" class="hover:text-[#f5c518]">Access Pathways (APP)</a></li><li><a href="#" class="hover:text-[#f5c518]">Children Enrichment</a></li><li><a href="#" class="hover:text-[#f5c518]">Employment Support</a></li><li><a href="#" class="hover:text-[#f5c518]">Small-Scale Enterprises</a></li></ul></div>
-          <!-- Column 3 -->
-          <div><h4 class="font-semibold mb-4 text-white">Organisation</h4><ul class="space-y-2 text-sm text-white/60"><li><a href="#" class="hover:text-[#f5c518]">About Pathways</a></li><li><a href="#" class="hover:text-[#f5c518]">Stories</a></li><li><a href="#" class="hover:text-[#f5c518]">Alumni Outcomes</a></li><li><a href="#" class="hover:text-[#f5c518]">Partnerships</a></li><li><a href="#" class="hover:text-[#f5c518]">Apply</a></li></ul></div>
-          <!-- Column 4 -->
-          <div><h4 class="font-semibold mb-4 text-white">Support</h4><ul class="space-y-2 text-sm text-white/60"><li><a href="#" class="hover:text-[#f5c518]">Donate</a></li><li><a href="#" class="hover:text-[#f5c518]">Become a Partner</a></li><li><a href="#" class="hover:text-[#f5c518]">Contact Us</a></li><li><a href="#" class="hover:text-[#f5c518]">Privacy Policy</a></li><li><a href="#" class="hover:text-[#f5c518]">Terms of Service</a></li></ul></div>
+          <!-- col2 -->
+          <div>
+            <h4 class="font-semibold mb-4 text-white">Programs</h4>
+            <ul class="space-y-2 text-sm text-white/60">
+              <li><a href="programs.html" class="hover:text-[#f5c518]">Future Pathways (FPP)</a></li>
+              <li><a href="programs.html" class="hover:text-[#f5c518]">Access Pathways (APP)</a></li>
+              <li><a href="programs.html" class="hover:text-[#f5c518]">Children Enrichment</a></li>
+              <li><a href="programs.html" class="hover:text-[#f5c518]">Employment Support</a></li>
+              <li><a href="programs.html" class="hover:text-[#f5c518]">Small-Scale Enterprises</a></li>
+            </ul>
+          </div>
+          <!-- col3 -->
+          <div>
+            <h4 class="font-semibold mb-4 text-white">Organisation</h4>
+            <ul class="space-y-2 text-sm text-white/60">
+              <li><a href="about.html" class="hover:text-[#f5c518]">About Pathways</a></li>
+              <li><a href="stories.html" class="hover:text-[#f5c518]">Stories</a></li>
+              <li><a href="stories.html" class="hover:text-[#f5c518]">Alumni Outcomes</a></li>
+              <li><a href="about.html" class="hover:text-[#f5c518]">Partnerships</a></li>
+              <li><a href="apply.html" class="hover:text-[#f5c518]">Apply</a></li>
+            </ul>
+          </div>
+          <!-- col4 -->
+          <div>
+            <h4 class="font-semibold mb-4 text-white">Support</h4>
+            <ul class="space-y-2 text-sm text-white/60">
+              <li><a href="support.html" class="hover:text-[#f5c518]">Donate</a></li>
+              <li><a href="support.html" class="hover:text-[#f5c518]">Become a Partner</a></li>
+              <li><a href="contact.html" class="hover:text-[#f5c518]">Contact Us</a></li>
+              <li><a href="#" class="hover:text-[#f5c518]">Privacy Policy</a></li>
+              <li><a href="#" class="hover:text-[#f5c518]">Terms of Service</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-white/40">
+
+        <!-- three stacked lines exactly as requested -->
+        <div class="pt-8 border-t border-white/10 flex flex-col items-center gap-1 text-sm text-white/40 text-center">
           <p>© 2025 Pathways. All rights reserved.</p>
-          <p class="text-center md:text-right">Pathways is an initiative of RISE Ubuntu, a registered non-profit organization in Zambia.</p>
+          <p>Pathways is an initiative of RISE Ubuntu, a registered non-profit organization in Zambia.</p>
+          <p>Built by Keejah Mwandu</p>
         </div>
       </div>
     </footer>
