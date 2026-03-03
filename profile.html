@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Queen Braids Studio | AfroStyle Connect</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background:#FAF4EC;color:#1A1A1A;padding-top:90px;}
+.navbar{position:fixed;top:0;width:100%;padding:20px 10%;display:flex;justify-content:space-between;align-items:center;background:rgba(44,27,24,0.6);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.1);z-index:1000;}
+.logo{font-family:'Playfair Display', serif;font-size:22px;color:white;}
+.navbar a{color:white;text-decoration:none;margin-left:25px;}
+
+/* PROFILE HEADER */
+.profile-header{padding:80px 10%;display:flex;gap:40px;align-items:center;}
+.profile-header img{width:300px;height:300px;object-fit:cover;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,0.15);}
+.profile-info h1{font-family:'Playfair Display', serif;font-size:40px;}
+.profile-info p{margin:10px 0;color:gray;}
+.rating{color:#C6A75E;font-weight:600;}
+
+/* SECTION STYLING */
+.section{padding:60px 10%;}
+.section h2{font-family:'Playfair Display', serif;margin-bottom:30px;font-size:28px;}
+
+/* SERVICES */
+.service-card{background:white;border-radius:15px;padding:20px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 10px 30px rgba(0,0,0,0.05);transition:0.3s;}
+.service-card:hover{transform:translateY(-5px);}
+.service-info h3{margin-bottom:5px;}
+.service-price{font-weight:600;}
+
+/* GALLERY */
+.gallery{display:flex;gap:20px;flex-wrap:wrap;}
+.gallery img{width:30%;height:200px;object-fit:cover;border-radius:15px;}
+
+/* REVIEWS */
+.review{background:white;padding:20px;border-radius:15px;margin-bottom:20px;box-shadow:0 10px 30px rgba(0,0,0,0.05);}
+.review h4{margin-bottom:10px;}
+
+/* BOOK BUTTON */
+.book-btn{position:fixed;bottom:30px;right:30px;background:#C6A75E;padding:18px 35px;border:none;border-radius:40px;font-weight:bold;cursor:pointer;box-shadow:0 15px 40px rgba(0,0,0,0.2);transition:0.3s;}
+.book-btn:hover{background:#b8954f;}
+
+/* RESPONSIVE */
+@media(max-width:900px){.profile-header{flex-direction:column;text-align:center;}.profile-header img{width:100%;height:300px;}.gallery img{width:100%;}}
+</style>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">AfroStyle Connect</div>
+    <nav>
+        <a href="index.html">Home</a>
+    </nav>
+</header>
+
+<section class="profile-header">
+    <img src="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c">
+    <div class="profile-info">
+        <h1>Queen Braids Studio</h1>
+        <p>Lusaka, Zambia</p>
+        <p class="rating">★★★★★ (4.8 rating)</p>
+        <p>Specialists in knotless braids, Ghana weaving, dreadlocks and natural hair care.</p>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Services</h2>
+    <div class="service-card"><div class="service-info"><h3>Knotless Braids</h3><p>Duration: 3-4 hours</p></div><div class="service-price">K250</div></div>
+    <div class="service-card"><div class="service-info"><h3>Ghana Weaving</h3><p>Duration: 2-3 hours</p></div><div class="service-price">K200</div></div>
+    <div class="service-card"><div class="service-info"><h3>Dreadlock Retwist</h3><p>Duration: 2 hours</p></div><div class="service-price">K180</div></div>
+</section>
+
+<section class="section">
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f">
+        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486">
+        <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250">
+    </div>
+</section>
+
+<section class="section">
+    <h2>Reviews</h2>
+    <div class="review"><h4>Mary K.</h4><p>Absolutely loved my braids! Very professional and neat work.</p></div>
+    <div class="review"><h4>Grace L.</h4><p>Great service and clean environment. Highly recommend.</p></div>
+</section>
+
+<button class="book-btn" onclick="location.href='booking.html'">Book Appointment</button>
+
+</body>
+</html>
