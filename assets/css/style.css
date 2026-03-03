@@ -1,282 +1,240 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Pathways | RISE Ubuntu</title>
-  <!-- Tailwind + Inter font -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Inter', system-ui, sans-serif; }
-    .text-gold { color: #f5c518; }
-    .bg-deep-navy { background-color: #0d1b3e; }
-    .from-deep-navy\/75 { --tw-gradient-from: rgba(13, 27, 62, 0.75); }
-    .via-deep-navy\/55 { --tw-gradient-via: rgba(13, 27, 62, 0.55); }
-    .to-deep-navy\/80 { --tw-gradient-to: rgba(13, 27, 62, 0.8); }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    /* mobile menu toggle */
-    #mobileMenu { transition: max-height 0.3s ease, opacity 0.2s; max-height: 0; opacity: 0; overflow: hidden; }
-    #mobileMenu.open { max-height: 400px; opacity: 1; }
+body {
+    background-color: #FAF4EC;
+    color: #1A1A1A;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
 
-    /* hero background (same as index) */
-    .hero-bg {
-      background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
+/* NAVBAR */
+.navbar {
+    background: #2C1B18;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #C6A75E;
+}
+
+.btn-outline {
+    border: 1px solid #C6A75E;
+    padding: 8px 18px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: #C6A75E;
+    color: #2C1B18;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1580618672591-eb180b1a973f') center/cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    color: white;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.search-box {
+    display: flex;
+    max-width: 500px;
+}
+
+.search-box input {
+    padding: 15px;
+    flex: 1;
+    border: none;
+    border-radius: 30px 0 0 30px;
+}
+
+.search-box button {
+    padding: 15px 25px;
+    background: #C6A75E;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #b8954f;
+}
+
+/* FEATURED */
+.featured {
+    padding: 80px 10%;
+}
+
+.featured h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.card-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 30%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 15px 15px 5px 15px;
+    font-size: 18px;
+}
+
+.card p {
+    padding: 0 15px 10px 15px;
+    color: gray;
+}
+
+.card button {
+    margin: 15px;
+    padding: 12px;
+    background: #2C1B18;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    width: calc(100% - 30px);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: #C6A75E;
+    color: #2C1B18;
+}
+
+/* HOW IT WORKS */
+.how-it-works {
+    background: #F5E6D3;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.steps div {
+    width: 30%;
+}
+
+/* CTA */
+.cta {
+    background: #2C1B18;
+    color: white;
+    text-align: center;
+    padding: 80px 10%;
+}
+
+.cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+}
+
+.cta button {
+    margin-top: 30px;
+    padding: 14px 40px;
+    background: #C6A75E;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cta button:hover {
+    background: #b8954f;
+}
+
+/* FOOTER */
+footer {
+    background: #1A1A1A;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    .card {
+        width: 100%;
     }
-  </style>
-</head>
-<body class="antialiased text-gray-800">
 
-  <!-- ===== fixed navbar (identical to other pages, with .html links and correct logos) ===== -->
-  <div class="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 pt-4">
-    <nav class="max-w-6xl mx-auto rounded-2xl transition-all duration-300 bg-white/15 backdrop-blur-md border border-white/30 shadow-lg">
-      <div class="px-5 lg:px-8 h-16 flex items-center justify-between">
-        <a class="flex items-center gap-2 flex-shrink-0" href="/">
-          <!-- correct logo URLs from rise-henna-pi.vercel.app -->
-          <img src="https://rise-henna-pi.vercel.app/main%20logo%20left.png" alt="Pathways" class="h-8 w-auto object-contain">
-          <img src="https://rise-henna-pi.vercel.app/logo%20right.png" alt="RISE Ubuntu" class="h-8 w-auto object-contain">
-        </a>
-        <div class="hidden lg:flex items-center gap-6">
-          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="index.html">Home</a>
-          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="about.html">About</a>
-          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="programs.html">Programs</a>
-          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="stories.html">Stories</a>
-          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="apply.html">Apply</a>
-          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white/90" href="support.html">Support</a>
-          <a class="text-[13px] font-medium transition-colors hover:text-[#f5c518] text-white font-semibold underline underline-offset-4 decoration-[#f5c518]" href="contact.html">Contact</a>
-        </div>
-        <div class="flex items-center gap-2">
-          <button class="inline-flex items-center justify-center bg-[#f5c518] text-[#0d1b3e] hover:bg-[#f5c518]/90 font-semibold rounded-full px-5 h-9 text-sm shadow-md">Apply Now</button>
-          <button id="menuToggle" type="button" aria-label="Toggle menu" class="lg:hidden flex items-center justify-center w-9 h-9 rounded-full border-2 border-white/50 text-white hover:bg-white/10">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" id="chevronIcon"><path d="m6 9 6 6 6-6"/></svg>
-          </button>
-        </div>
-      </div>
-      <!-- mobile dropdown (corrected .html links) -->
-      <div id="mobileMenu" class="lg:hidden overflow-hidden bg-white/10 backdrop-blur-md rounded-b-2xl border-t border-white/20 px-5">
-        <div class="flex flex-col py-4 space-y-3">
-          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="index.html">Home</a>
-          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="about.html">About</a>
-          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="programs.html">Programs</a>
-          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="stories.html">Stories</a>
-          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="apply.html">Apply</a>
-          <a class="text-[15px] font-medium text-white/90 hover:text-[#f5c518]" href="support.html">Support</a>
-          <a class="text-[15px] font-medium text-white hover:text-[#f5c518] font-semibold" href="contact.html">Contact</a>
-        </div>
-      </div>
-    </nav>
-  </div>
+    .steps div {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 
-  <main class="min-h-screen bg-gray-50">
-
-    <!-- ===== HERO – full screen, same as index ===== -->
-    <section class="relative min-h-screen flex items-center justify-center hero-bg">
-      <!-- overlays (same as index) -->
-      <div class="absolute inset-0 z-[5] bg-black/25"></div>
-      <div class="absolute inset-0 z-10 bg-gradient-to-b from-[#0d1b3e]/75 via-[#0d1b3e]/55 to-[#0d1b3e]/80"></div>
-
-      <div class="relative z-20 max-w-4xl mx-auto px-6 lg:px-8 text-center py-20">
-        <div class="space-y-6">
-          <span class="inline-block text-xs font-bold tracking-widest uppercase bg-[#f5c518] text-[#0d1b3e] px-4 py-1.5 rounded-full shadow-lg">Contact</span>
-          <h1 class="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight text-white drop-shadow-lg">
-            Get in <span class="font-semibold text-[#f5c518]">Touch</span>
-          </h1>
-          <p class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed text-balance">
-            We'd love to hear from you — whether you're a student, partner, donor, or community member.
-          </p>
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
-            <button class="inline-flex items-center justify-center gap-2 bg-[#f5c518] text-[#0d1b3e] hover:bg-[#f5c518]/90 font-semibold rounded-full px-7 h-11 text-sm group shadow-lg">
-              Email Us
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform">
-                <path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>
-              </svg>
-            </button>
-            <button class="inline-flex items-center justify-center gap-2 font-medium rounded-full px-7 h-11 text-sm border-2 border-white/50 text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm">
-              Visit Us
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CONTACT INFORMATION ===== -->
-    <section class="py-16 bg-white">
-      <div class="max-w-4xl mx-auto px-6 lg:px-8">
-        <div class="bg-gray-50 rounded-2xl p-8 md:p-12 shadow-md border border-gray-200">
-          <h2 class="text-3xl md:text-4xl font-light text-[#0d1b3e] text-center mb-8">Contact <span class="font-semibold">Information</span></h2>
-
-          <div class="grid md:grid-cols-2 gap-8">
-            <!-- Email (main contact) -->
-            <div class="flex flex-col items-center text-center p-6 rounded-xl bg-white shadow-sm border border-gray-100">
-              <div class="w-14 h-14 rounded-full bg-[#f5c518]/15 flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f5c518" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect width="20" height="16" x="2" y="4" rx="2"/>
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                </svg>
-              </div>
-              <h3 class="text-lg font-semibold text-[#0d1b3e] mb-2">Email</h3>
-              <a href="mailto:info@pathways.org.zm" class="text-gray-600 hover:text-[#f5c518] transition">info@pathways.org.zm</a>
-            </div>
-
-            <!-- Phone -->
-            <div class="flex flex-col items-center text-center p-6 rounded-xl bg-white shadow-sm border border-gray-100">
-              <div class="w-14 h-14 rounded-full bg-[#f5c518]/15 flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f5c518" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.574 2.81.7A2 2 0 0 1 22 16.92z"/>
-                </svg>
-              </div>
-              <h3 class="text-lg font-semibold text-[#0d1b3e] mb-2">Phone</h3>
-              <p class="text-gray-600">To be confirmed</p>
-            </div>
-
-            <!-- Address -->
-            <div class="flex flex-col items-center text-center p-6 rounded-xl bg-white shadow-sm border border-gray-100 md:col-span-2 lg:col-span-1">
-              <div class="w-14 h-14 rounded-full bg-[#f5c518]/15 flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f5c518" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0z"/>
-                  <circle cx="12" cy="10" r="3"/>
-                </svg>
-              </div>
-              <h3 class="text-lg font-semibold text-[#0d1b3e] mb-2">Address</h3>
-              <p class="text-gray-600">Lusaka, Zambia</p>
-            </div>
-          </div>
-
-          <!-- Additional note -->
-          <div class="mt-10 text-center text-sm text-gray-500 border-t border-gray-200 pt-8">
-            <p>Pathways is an initiative of <span class="font-semibold text-[#0d1b3e]">RISE Ubuntu</span>, a registered non-profit organisation in Zambia.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CONTACT FORM with file upload ===== -->
-    <section class="py-16 bg-gray-100">
-      <div class="max-w-3xl mx-auto px-6 lg:px-8">
-        <h2 class="text-3xl md:text-4xl font-light text-[#0d1b3e] text-center mb-4">Send a <span class="font-semibold">Message</span></h2>
-        <p class="text-center text-gray-600 mb-8">We'll get back to you within 48 hours.</p>
-        <!-- added enctype for file upload -->
-        <form class="bg-white rounded-2xl p-8 shadow-md border border-gray-200" enctype="multipart/form-data">
-          <div class="grid md:grid-cols-2 gap-6 mb-6">
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-              <input type="text" placeholder="Your name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#f5c518] focus:border-transparent outline-none">
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-              <input type="email" placeholder="your@email.com" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#f5c518] focus:border-transparent outline-none">
-            </div>
-          </div>
-          <div class="mb-6">
-            <label class="block text-sm font-medium text-gray-700 mb-1">Reason for Contact</label>
-            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#f5c518] focus:border-transparent outline-none bg-white">
-              <option>Select a reason</option>
-              <option>General Inquiry</option>
-              <option>Application Question</option>
-              <option>Partnership Opportunity</option>
-              <option>Donation</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="mb-6">
-            <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-            <textarea rows="5" placeholder="How can we help?" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#f5c518] focus:border-transparent outline-none"></textarea>
-          </div>
-          <!-- New file upload field -->
-          <div class="mb-6">
-            <label class="block text-sm font-medium text-gray-700 mb-1">Attach File (optional)</label>
-            <input type="file" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#f5c518] focus:border-transparent outline-none file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#f5c518] file:text-[#0d1b3e] hover:file:bg-[#f5c518]/90">
-          </div>
-          <div class="text-center">
-            <button type="submit" class="inline-flex items-center justify-center gap-2 bg-[#0d1b3e] text-[#f5c518] hover:bg-[#0d1b3e]/90 font-semibold rounded-full px-8 h-12 text-base shadow-lg transition">
-              Send Message
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-            </button>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <!-- ===== FOOTER with three stacked lines and credit ===== -->
-    <footer class="bg-[#0d1b3e] border-t border-white/10">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10">
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          <!-- col1 -->
-          <div class="space-y-4">
-            <a class="flex items-center gap-2" href="/">
-              <img src="https://rise-henna-pi.vercel.app/main%20logo%20left.png" alt="Pathways" class="h-9 w-auto object-contain brightness-0 invert">
-              <img src="https://rise-henna-pi.vercel.app/logo%20right.png" alt="RISE Ubuntu" class="h-9 w-auto object-contain brightness-0 invert">
-            </a>
-            <p class="text-sm text-white/60">Pathways is an initiative of RISE Ubuntu, a registered non-profit organization in Zambia.</p>
-            <a href="mailto:info@pathways.org.zm" class="text-sm text-[#f5c518]/90 font-medium hover:text-[#f5c518] transition-colors">info@pathways.org.zm</a>
-            <div class="flex gap-4">
-              <a href="#" aria-label="Facebook" class="text-white/50 hover:text-[#f5c518]"><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-              <a href="#" aria-label="Instagram" class="text-white/50 hover:text-[#f5c518]"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-              <a href="#" aria-label="Twitter" class="text-white/50 hover:text-[#f5c518]"><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-              <a href="#" aria-label="YouTube" class="text-white/50 hover:text-[#f5c518]"><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
-            </div>
-          </div>
-          <!-- col2 -->
-          <div>
-            <h4 class="font-semibold mb-4 text-white">Programs</h4>
-            <ul class="space-y-2 text-sm text-white/60">
-              <li><a href="programs.html" class="hover:text-[#f5c518]">Future Pathways (FPP)</a></li>
-              <li><a href="programs.html" class="hover:text-[#f5c518]">Access Pathways (APP)</a></li>
-              <li><a href="programs.html" class="hover:text-[#f5c518]">Children Enrichment</a></li>
-              <li><a href="programs.html" class="hover:text-[#f5c518]">Employment Support</a></li>
-              <li><a href="programs.html" class="hover:text-[#f5c518]">Small-Scale Enterprises</a></li>
-            </ul>
-          </div>
-          <!-- col3 -->
-          <div>
-            <h4 class="font-semibold mb-4 text-white">Organisation</h4>
-            <ul class="space-y-2 text-sm text-white/60">
-              <li><a href="about.html" class="hover:text-[#f5c518]">About Pathways</a></li>
-              <li><a href="stories.html" class="hover:text-[#f5c518]">Stories</a></li>
-              <li><a href="stories.html" class="hover:text-[#f5c518]">Alumni Outcomes</a></li>
-              <li><a href="about.html" class="hover:text-[#f5c518]">Partnerships</a></li>
-              <li><a href="apply.html" class="hover:text-[#f5c518]">Apply</a></li>
-            </ul>
-          </div>
-          <!-- col4 -->
-          <div>
-            <h4 class="font-semibold mb-4 text-white">Support</h4>
-            <ul class="space-y-2 text-sm text-white/60">
-              <li><a href="support.html" class="hover:text-[#f5c518]">Donate</a></li>
-              <li><a href="support.html" class="hover:text-[#f5c518]">Become a Partner</a></li>
-              <li><a href="contact.html" class="hover:text-[#f5c518]">Contact Us</a></li>
-              <li><a href="#" class="hover:text-[#f5c518]">Privacy Policy</a></li>
-              <li><a href="#" class="hover:text-[#f5c518]">Terms of Service</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- three stacked lines exactly as requested -->
-        <div class="pt-8 border-t border-white/10 flex flex-col items-center gap-1 text-sm text-white/40 text-center">
-          <p>© 2025 Pathways. All rights reserved.</p>
-          <p>Pathways is an initiative of RISE Ubuntu, a registered non-profit organization in Zambia.</p>
-          <p>Built by Keejah Mwandu</p>
-        </div>
-      </div>
-    </footer>
-  </main>
-
-  <!-- mobile menu toggle script -->
-  <script>
-    (function() {
-      const toggle = document.getElementById('menuToggle');
-      const menu = document.getElementById('mobileMenu');
-      const chevron = document.getElementById('chevronIcon');
-      if (toggle && menu) {
-        toggle.addEventListener('click', () => {
-          menu.classList.toggle('open');
-          chevron.style.transform = menu.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
-        });
-      }
-    })();
-  </script>
-</body>
-</html>
+    .hero h1 {
+        font-size: 38px;
+    }
+}
